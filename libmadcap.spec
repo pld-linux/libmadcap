@@ -51,7 +51,7 @@ Wersja statyczna biblioteki libmadcap.
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 automake --add-missing
