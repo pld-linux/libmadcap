@@ -52,9 +52,9 @@ Wersja statyczna biblioteki libmadcap.
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
-automake --add-missing
+%{__automake}
 %configure
 %{__make}
 
@@ -65,8 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR="$RPM_BUILD_ROOT"
 
 install %{SOURCE1} .
-
-gzip -9nf AUTHORS*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
