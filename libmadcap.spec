@@ -1,4 +1,4 @@
-Summary:	MADCAP protocol client library	
+Summary:	MADCAP protocol client library
 Summary(pl):	Biblioteka klienta protoko³u MADCAP
 Name:		libmadcap
 Version:	0.1
@@ -76,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS* 
+%doc AUTHORS*
 %attr(755,root,root) %{_libdir}/*.so.*.*
 
 %files devel
