@@ -5,7 +5,7 @@ Version:	0.1
 Release:	4
 License:	GPL
 Group:		Libraries
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/malloc/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/malloc/%{name}-%{version}.tar.gz
 Source1:	http://deimos.campus.luth.se/malloc/documentation/%{name}_manual.pdf
 Patch0:		%{name}-termcap.patch
 URL:		http://deimos.campus.luth.se/malloc/
