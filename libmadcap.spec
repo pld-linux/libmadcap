@@ -2,13 +2,18 @@ Summary:	MADCAP protocol client library
 Summary(pl):	Biblioteka klienta protokoЁu MADCAP
 Name:		libmadcap
 Version:	0.1
-Release:	3
+Release:	4
+License:	GPL
 Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-License:	GPL
-Source0:	http://prdownloads.sourceforge.net/malloc/libmadcap-0.1.tar.gz
-Source1:	http://deimos.campus.luth.se/malloc/documentation/libmadcap_manual.pdf
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/malloc/%{name}-%{version}.tar.gz
+Source1:	http://deimos.campus.luth.se/malloc/documentation/%{name}_manual.pdf
 Patch0:		%{name}-termcap.patch
 URL:		http://deimos.campus.luth.se/malloc/
 BuildRequires:	ncurses-devel
@@ -27,8 +32,13 @@ To jest prosta implementacja protokoЁu MADCAP (RFC2730).
 Summary:	Development part of libmadcap
 Summary(pl):	CzЙ╤Ф dla programistСw biblioteki libmadcap
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -41,8 +51,13 @@ Pliki potrzebne do programowania z wykorzystaniem libmadcap.
 Summary:	Static version of libmadcap library
 Summary(pl):	Wersja statyczna biblioteki libmadcap
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -53,7 +68,6 @@ Wersja statyczna biblioteki libmadcap.
 
 %prep
 %setup  -q
-
 %patch0 -p1
 
 %build
@@ -75,40 +89,24 @@ install %{SOURCE1} .
 
 gzip -9nf AUTHORS*
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS* 
-%{_libdir}/*.so.*.*
+%attr(755,root,root) %{_libdir}/*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %doc libmadcap_manual.pdf
 %{_includedir}/madcap
-%{_libdir}/*.so
-%{_libdir}/*.la
+%attr(755,root,root) %{_libdir}/*.so
+%attr(755,root,root) %{_libdir}/*.la
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/*.a
-
-%changelog
-* %{date} PLD Team <pld-list@pld.org.pl>
-All persons listed below can be reached at <cvs_login>@pld.org.pl
-
-$Log: libmadcap.spec,v $
-Revision 1.3  2001-10-07 19:35:01  blues
-- release 3
-- ac2.5 ready
-
-Revision 1.2  2001/10/03 16:41:41  filon
-- changed req for main subpkg in static subpkg to devel
-- release 2
-
-Revision 1.1  2001/06/25 17:41:28  jajcus
-- initial spec
