@@ -1,0 +1,11 @@
+diff -durN libmadcap-0.1.orig/test/Makefile.am libmadcap-0.1/test/Makefile.am
+--- libmadcap-0.1.orig/test/Makefile.am	Wed May 16 14:55:07 2001
++++ libmadcap-0.1/test/Makefile.am	Mon Jun 25 19:31:17 2001
+@@ -8,6 +8,6 @@
+ 		      discover.c \
+ 		      discover.h
+ 
+-testprogram_LDADD = ../src/.libs/libmadcap.a -ltermcap -lreadline
++testprogram_LDADD = ../src/.libs/libmadcap.a -ltinfo -lreadline
+ 
+ INCLUDES = -I@top_srcdir@/src/
