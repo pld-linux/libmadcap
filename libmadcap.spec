@@ -2,7 +2,7 @@ Summary:	MADCAP protocol client library
 Summary(pl):	Biblioteka klienta protoko³u MADCAP
 Name:		libmadcap
 Version:	0.1
-Release:	1
+Release:	2
 Group:		Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
@@ -40,7 +40,7 @@ Summary(pl):	Wersja statyczna biblioteki libmadcap
 Group:		Development/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Requires:	%{name} = %{version}
+Requires:	%{name}-devel = %{version}
 
 %description static
 Static version of libmadcap.
@@ -97,5 +97,9 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld.org.pl
 
 $Log: libmadcap.spec,v $
-Revision 1.1  2001-06-25 17:41:28  jajcus
+Revision 1.2  2001-10-03 16:41:41  filon
+- changed req for main subpkg in static subpkg to devel
+- release 2
+
+Revision 1.1  2001/06/25 17:41:28  jajcus
 - initial spec
