@@ -5,13 +5,6 @@ Version:	0.1
 Release:	4
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/malloc/%{name}-%{version}.tar.gz
 Source1:	http://deimos.campus.luth.se/malloc/documentation/%{name}_manual.pdf
 Patch0:		%{name}-termcap.patch
@@ -32,13 +25,6 @@ To jest prosta implementacja protokoЁu MADCAP (RFC2730).
 Summary:	Development part of libmadcap
 Summary(pl):	CzЙ╤Ф dla programistСw biblioteki libmadcap
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -51,13 +37,6 @@ Pliki potrzebne do programowania z wykorzystaniem libmadcap.
 Summary:	Static version of libmadcap library
 Summary(pl):	Wersja statyczna biblioteki libmadcap
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
