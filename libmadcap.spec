@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc libmadcap_manual.pdf
 %{_includedir}/madcap
 %attr(755,root,root) %{_libdir}/*.so
-%attr(755,root,root) %{_libdir}/*.la
+%{_libdir}/*.la
 
 %files static
 %defattr(644,root,root,755)
