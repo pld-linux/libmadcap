@@ -2,7 +2,7 @@ Summary:	MADCAP protocol client library
 Summary(pl):	Biblioteka klienta protoko³u MADCAP
 Name:		libmadcap
 Version:	0.1
-Release:	2
+Release:	3
 Group:		Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
@@ -12,6 +12,9 @@ Source1:	http://deimos.campus.luth.se/malloc/documentation/libmadcap_manual.pdf
 Patch0:		%{name}-termcap.patch
 URL:		http://deimos.campus.luth.se/malloc/
 BuildRequires:	ncurses-devel
+BuildRequires:	automake
+BuildRequires:	autoconf
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,9 +57,11 @@ Wersja statyczna biblioteki libmadcap.
 %patch0 -p1
 
 %build
+rm -f missing
+libtoolize --copy --force
 aclocal
-automake --add-missing
 autoconf
+automake --add-missing
 %configure
 %{__make}
 
@@ -97,7 +102,11 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld.org.pl
 
 $Log: libmadcap.spec,v $
-Revision 1.2  2001-10-03 16:41:41  filon
+Revision 1.3  2001-10-07 19:35:01  blues
+- release 3
+- ac2.5 ready
+
+Revision 1.2  2001/10/03 16:41:41  filon
 - changed req for main subpkg in static subpkg to devel
 - release 2
 
