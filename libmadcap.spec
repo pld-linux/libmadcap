@@ -6,6 +6,7 @@ Release:	4
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/malloc/%{name}-%{version}.tar.gz
+# Source0-md5:	b9314ccddbe73cf3e1a9147ccd357cb6
 Source1:	http://deimos.campus.luth.se/malloc/documentation/%{name}_manual.pdf
 Patch0:		%{name}-termcap.patch
 URL:		http://deimos.campus.luth.se/malloc/
