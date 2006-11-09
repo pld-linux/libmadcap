@@ -10,10 +10,10 @@ Source0:	http://dl.sourceforge.net/malloc/%{name}-%{version}.tar.gz
 Source1:	http://deimos.campus.luth.se/malloc/documentation/%{name}_manual.pdf
 Patch0:		%{name}-termcap.patch
 URL:		http://deimos.campus.luth.se/malloc/
-BuildRequires:	ncurses-devel
-BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libtool
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,7 +26,7 @@ To jest prosta implementacja protoko³u MADCAP (RFC2730).
 Summary:	Development part of libmadcap
 Summary(pl):	Czê¶æ dla programistów biblioteki libmadcap
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Development part of libmadcap.
@@ -38,7 +38,7 @@ Pliki potrzebne do programowania z wykorzystaniem libmadcap.
 Summary:	Static version of libmadcap library
 Summary(pl):	Wersja statyczna biblioteki libmadcap
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of libmadcap.
