@@ -1,5 +1,5 @@
 Summary:	MADCAP protocol client library
-Summary(pl):	Biblioteka klienta protoko³u MADCAP
+Summary(pl.UTF-8):   Biblioteka klienta protokoÅ‚u MADCAP
 Name:		libmadcap
 Version:	0.1
 Release:	4
@@ -19,31 +19,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This is basic MADCAP (RFC2730) client implementation library.
 
-%description -l pl
-To jest prosta implementacja protoko³u MADCAP (RFC2730).
+%description -l pl.UTF-8
+To jest prosta implementacja protokoÅ‚u MADCAP (RFC2730).
 
 %package devel
 Summary:	Development part of libmadcap
-Summary(pl):	Czê¶æ dla programistów biblioteki libmadcap
+Summary(pl.UTF-8):   CzÄ™Å›Ä‡ dla programistÃ³w biblioteki libmadcap
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Development part of libmadcap.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki potrzebne do programowania z wykorzystaniem libmadcap.
 
 %package static
 Summary:	Static version of libmadcap library
-Summary(pl):	Wersja statyczna biblioteki libmadcap
+Summary(pl.UTF-8):   Wersja statyczna biblioteki libmadcap
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of libmadcap.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Wersja statyczna biblioteki libmadcap.
 
 %prep
