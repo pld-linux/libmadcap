@@ -7,9 +7,10 @@ License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/malloc/%{name}-%{version}.tar.gz
 # Source0-md5:	b9314ccddbe73cf3e1a9147ccd357cb6
-Source1:	http://deimos.campus.luth.se/malloc/documentation/%{name}_manual.pdf
+Source1:	%{name}_manual.pdf
+# Source1-md5:	615dc6c4234276e1a63720dfa76138b3
 Patch0:		%{name}-termcap.patch
-URL:		http://deimos.campus.luth.se/malloc/
+URL:		http://malloc.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
